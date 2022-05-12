@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://agendatucita.sedena.gob.mx/afiliar#no-back-button -->
+<html class="loaded" lang="en" data-textdirection="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"><!-- BEGIN: Head--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Sistema Web de Citas Sedena.">
+    <meta name="keywords" content="Sistema Web de Citas Sedena">
+    <meta name="author" content="Nelson Roas">
+    <meta http-equiv="Content-Security-Policy">
+    <title>Registro de Usuario en Sistema de Citas Médicas HCM</title>
+    <link rel="apple-touch-icon" href="https://agendatucita.sedena.gob.mx/app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://agendatucita.sedena.gob.mx/app-assets/images/ico/favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CQuicksand:300,400,500,700"
+        rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="./Registro Web Sitas Sedema_files/vendors.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="bootstrap/Login/cs/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/Login/cs/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/Login/cs/colors.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/Login/cs/components.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- END: Theme CSS-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="bootstrap/Login/cs/vertical-menu-modern.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/Login/cs/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/Login/cs/login-register.css">
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="bootstrap/Login/cs/style.css">
+    <!-- END: Custom CSS-->
+    <script type="text/javascript">
+        function nobackbutton(){
+            window.location.hash="no-back-button";
+            window.location.hash="Again-No-back-button" //chrome
+            window.onhashchange=function(){window.location.hash="no-back-button";}
+        }
+        function nobotonderecho(){
+	       document.oncontextmenu = function(){alert ("SEDENA, TODOS LOS DERECHOS RESERVADOS.");return false}
+        }
+         
+    </script>
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+
+<body onload="mostrarMsgProceo();nobackbutton();" class="vertical-layout vertical-menu-modern 1-column blank-page pace-done" data-open="click" data-menu="vertical-menu-modern" data-col="1-column" style=""><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+    <!-- BEGIN: Content-->
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <section class="row flexbox-container">
+                    <div class="col-12 d-flex align-items-center justify-content-center">
+                        <div class="col-lg-4 col-md-8 col-10 box-shadow-2 p-0">
+                            <div class="card border-grey border-lighten-3 px-2 py-2 m-0">
+                                <div class="card-header border-0">
+                                    <div class="card-title text-center">
+                                        <img src="./Registro Web Sitas Sedema_files/logo-dark.png" alt="branding logo">
+                                    </div>
+                                    <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2"><span>CREA UNA CUENTA</span>
+                                    </h6>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                                <div class="form-group">
+<!--                                                    <h5>Large Modal</h5>
+                                                    <p>Add class <code>.modal-lg</code> with <code>.modal-dialog</code> to use large size of modal.</p>-->
+                                                    <!-- Button trigger modal -->
+<!--                                                    <button type="button" class="btn btn-outline-success block btn-lg" data-toggle="modal" data-target="#large">
+                                                        Launch Modal
+                                                    </button>-->
+
+                                                    <!-- Modal -->
+                                                    <div class="modal fade animated slideInDown text-left" id="myModalPrivacidad" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" style="display: none;" aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h4 class="modal-title" id="myModalLabel17">AVISO DE PRIVACIDAD SIMPLIFICADO</h4>
+<!--                                                                    <a href="./login" class="close" data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </a>-->
+                                                                </div>
+                                                                <div class="modal-body">
+<!--                                                                    <h5>Check First Paragraph</h5>-->
+                                                                    <p style="text-align: justify;">Secretaría de la Defensa Nacional, Hospital Central Militar., H.C.M., es el responsable del tratamiento de los datos personales que nos proporcione, los cuales serán protegidos conforme a lo dispuesto por la Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados, y demás normatividad que resulte aplicable.</p>
+                                                                    <h5>¿Para qué fines utilizaremos sus datos personales?</h5>
+                                                                    <p style="text-align: justify;">Los datos personales que solicitamos los utilizaremos para las siguientes finalidades:</p>
+                                                                    <!-- Extra Small table start -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+<!--                                <h4 class="card-title">Extra Small table</h4>-->
+                                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+<!--                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                                    </ul>
+                                </div>-->
+                            </div>
+                            <div class="card-content collapse show">
+<!--                                <div class="card-body card-dashboard">
+                                    <p class="card-text">Example of extra small table, Add <code>.table-xs</code> class to the <code>.table</code> to create a table with extra small spacing. Extra small table all rows have <code>0.4rem</code> height.</p>
+                                </div>-->
+                                <div class="table-responsive">
+                                    <table class="table table-xs">
+                                        <thead>
+                                            <tr>
+                                                <th>Finalidad</th>
+                                                <th>¿ Requiere consentimiento del titular ?</th>
+                                                <th>NO</th>
+                                                <th>SI</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Citas en Línea</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td>X</td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Extra Small table end -->
+                                                                    <p style="text-align: justify;">En caso de que no desee que sus datos personales sean tratados para estas finalidades que requieren su consentimiento podrá indicarlo en: El titular de los datos personales puede manifestar su negativa del tratamiento en el presente aviso de privacidad, asimismo puede manifestar su negativa de forma presencial en las instalaciones de la Dirección General del Registro Federal de Armas de Fuego y Control de Explosivos. Los datos personales solicitados, correo electrónico, nombre completo, fecha de nacimiento y CURP se requieren únicamente para agendar una cita en línea para realizar trámites y servicios que brinda esta Dirección. La negativa en el tratamiento de los datos personales limita otorgar la cita correspondiente.
+                                                                    </p>
+                                                                    <hr>
+                                                                    <h5>¿Con quién compartimos su información personal y para qué fines?</h5>
+                                                                    <p style="text-align: justify;">Se informa que no se realizarán transferencias de datos personales, salvo aquéllas que sean necesarias para atender requerimientos de información de una autoridad competente, que estén debidamente fundados y motivados.
+                                                                        Si desea conocer nuestro aviso de privacidad integral, lo podrá consultar en: De forma física en el módulo de atención al público de la Dirección General del Registro Federal de Armas de Fuego y Control de Explosivos, ubicada en Av. Industria Militar No. 1111, Planta Baja del Edificio de los Servicios, Col. Lomas de Tecamachalco, Naucalpan de Juárez, Edo. Méx., C.P. 53950</p>
+                                                                    <p style="text-align: justify;">
+                                                                        Última actualización: 12/05/2021.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="modal-footer">
+<!--                                                                    <button type="button" class="btn grey btn-outline-secondary" data-dismiss="modal">Close</button>-->
+                                                                    <button type="button" class="btn btn-info btn-outline-primary" data-dismiss="modal">Aceptar</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <form name="f1" id="f1" method="POST" class="form-horizontal form-simple" action="https://agendatucita.sedena.gob.mx/afiliarUsuario">
+                                            <fieldset class="form-group position-relative has-icon-left mb-1">
+                                                <input type="text" class="form-control form-control-lg input-lg" placeholder="Nombre Completo" name="nombreCompleto" id="txtNombre" autofocus="autofocus" required="required" maxlength="90" value="">
+                                                <div class="form-control-position">
+                                                    <i class="la la-user"></i>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset class="form-group position-relative has-icon-left mb-1">
+                                                <input type="text" class="form-control form-control-lg input-lg" placeholder="C.U.R.P" name="curp" id="txtCurp" autofocus="autofocus" required="required" maxlength="20" oninput="validarInput(this)" value="">
+                                                <div class="form-control-position">
+                                                    <i class="la la-user"></i>
+                                                    
+                                                </div>
+                                                <pre id="resultado"></pre>
+                                                <br>    
+                                                <a href="https://www.gob.mx/curp/" target="_blank" title="Verificar CURP Aquí">Verificar CURP Aquí<i class="ft-eye ml-1 blue"></i></a>
+                                            </fieldset>
+                                            <fieldset class="form-group position-relative has-icon-left mb-1">
+                                                <label class="col-md-6 form-group position-relative has-icon-left" for="txtFecha">Fecha de Nacimiento:</label>
+                                                <!--<input type="date" class="form-control form-control-lg input-lg" placeholder="Fecha de Nacimiento" th:field="*{fechaNacimientoSTR}" name="txtFecha" id="txtFecha" required="required" >-->
+                                                <input type="date" class="form-control form-control-lg input-lg" name="fechaNacimientoSTR" id="txtFecha" placeholder="Fecha de Nacimiento" required="required" value="">
+                                                <!--<div class="form-control-position">
+                                                    <i class="la la-calendar"></i>
+                                                </div>-->
+                                            </fieldset>
+                                            <fieldset class="form-group position-relative has-icon-left mb-1">
+                                                <label class="col-md-6 form-group position-relative has-icon-left" for="cmbGenero">Sexo:</label>
+                                                <select name="genero" id="cmbGenero" autofocus="autofocus" class="form-control form-control-lg input-lg" required="required" placeholder="Genero">
+                                                    <option value="SELECCIONE">Seleccione</option>
+                                                    <option value="M">Hombre</option>
+                                                    <option value="F">Mujer</option>
+                                                </select>
+                                                <!--<div class="form-control-position">
+                                                    <i class="la la-user"></i>
+                                                </div>-->
+                                            </fieldset>
+                                            <fieldset class="form-group position-relative has-icon-left mb-1">
+                                                <input type="email" class="form-control form-control-lg input-lg" placeholder="Correo Electrónico" required="" name="correoUsuario" id="txtCorreo" value="">
+                                                <div class="form-control-position">
+                                                    <i class="la la-envelope"></i>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset class="form-group position-relative has-icon-left mb-1">
+                                                <input type="text" class="form-control form-control-lg input-lg" placeholder="Nro Telefónico." name="telefonoCelular" id="txtTelefono" maxlength="10" minlength="10" required="required" value="">
+                                                <div class="form-control-position">
+                                                    <i class="la la-phone"></i>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset class="form-group position-relative has-icon-left">
+                                                <input type="password" class="form-control form-control-lg input-lg" placeholder="Contraseña" required="" name="clvClaro" id="txtClave" minlength="8" maxlength="16" value="">
+                                                <a href="https://agendatucita.sedena.gob.mx/afiliar#passwordMessage" data-toggle="modal">
+                                                <div class="form-control-position">
+                                                    <i class="la la-key"></i>
+                                                </div>
+                                                </a>
+                                            </fieldset>
+                                            <fieldset class="form-group position-relative has-icon-left">
+                                                <input type="password" class="form-control form-control-lg input-lg" placeholder="Confirmar Contraseña" required="" name="clvClaroconfir" id="txtClave2" minlength="8" maxlength="16" value="">
+                                                <a href="https://agendatucita.sedena.gob.mx/afiliar#passwordMessage" data-toggle="modal">
+                                                    <div class="form-control-position">
+                                                    <i class="la la-key"></i>
+                                                </div></a>
+                                            </fieldset>
+                                            <button type="submit" class="btn btn-info btn-lg btn-block"><i class="ft-unlock"></i> Registrar</button>
+                                            <input type="hidden" id="msgProceso" name="msgProceso" value="">
+                                        </form>
+                                    </div>
+                                    <p class="text-center">¿Ya tienes cuenta ? <a href="https://agendatucita.sedena.gob.mx/login" class="card-link">Ingresar</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                <div id="messageModalError1" class="modal fade">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title info">Aviso</h5>
+                                                <a href="https://agendatucita.sedena.gob.mx/afiliar" class="close" data-dismiss="modal">×</a>
+                                            </div>
+                                            <div class="modal-body px-5">
+                                                <div class="row">
+                                                    <div class="col-12"></div>                                
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <div class="col-12 col-md-4 offset-md-4 text-center text-md-right">
+                                                        <button type="button" class="btn btn-rounded btn-info btn-block" data-dismiss="modal">Continuar</button>                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="messageModalExito" class="modal fade">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title info">Aviso</h5>
+                                                <button type="button" class="close" data-dismiss="modal">×</button>
+                                            </div>
+                                            <div class="modal-body px-5">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        Registro de usuario exitoso !
+                                                    </div>                                
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <div class="col-12 col-md-4 offset-md-4 text-center text-md-right">
+                                                        <a href="https://agendatucita.sedena.gob.mx/login" class="btn btn-info btn-rounded btn-block">Continuar</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="passwordMessage" class="modal fade">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title text-info info">Tu contraseña</h5>
+                                                            <button type="button" class="close" data-dismiss="modal">×</button>
+                                                        </div>
+                                                        <div class="modal-body px-5">
+                                                            <div class="row mb-3">
+                                                                <div class="col-12">
+                                                                   <h4>Debe Contener:</h4>
+                                                                </div>                                
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <ul>
+                                                                        <li>Mínimo 8 caracteres y máximo 16 caracteres.</li>
+                                                                        <li>Al menos una letra mayúscula y una minúscula.</li>
+                                                                        <li>Al menos un número.</li>
+                                                                        <!--<li>Al menos un carácter especial *#!_-@.,$%&+?.</li>-->
+                                                                    </ul>
+                                                                </div>                                
+                                                            </div>
+                                                            <div class="row mt-3">
+                                                                <div class="col-12 col-md-4 offset-md-4 text-center text-md-right">
+                                                                    <a href="https://agendatucita.sedena.gob.mx/afiliar#" data-dismiss="modal" class="btn btn-info btn-rounded btn-block">Continuar</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                </section>
+                                
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="./Registro Web Sitas Sedema_files/vendors.min.js.descarga"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="./Registro Web Sitas Sedema_files/jqBootstrapValidation.js.descarga"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="./Registro Web Sitas Sedema_files/app-menu.js.descarga"></script>
+    <script src="./Registro Web Sitas Sedema_files/app.js.descarga"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="./Registro Web Sitas Sedema_files/form-login-register.js.descarga"></script>
+    <!-- END: Page JS-->
+    <script>
+            function mostrarMsgProceo(){
+                var tipomsg=document.getElementById('msgProceso').value;
+                /*
+                if(document.getElementById('btnConitnuar').disabled){
+                    document.getElementById('btnConitnuar').disabled=false;
+                }*/
+                console.log("tipo de mensajes "+tipomsg);
+                if(tipomsg=="om1"){//error
+                    $('#messageModalError1').modal('show');
+                    document.getElementById('msgProceso').value="";
+                }
+                if(tipomsg=="ok1"){//error
+                    $('#messageModalExito').modal('show');
+                    document.getElementById('msgProceso').value="";
+                }
+                if(tipomsg=="inicio"){//error
+                    $('#myModalPrivacidad').modal({
+                        backdrop: 'static'
+                    },'show');
+                    document.getElementById('msgProceso').value="";
+                }
+            }
+        //Función para validar una CURP
+function curpValida(curp) {
+    var re = /^([A-Z][AEIOUX][A-Z]{2}\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])[HM](?:AS|B[CS]|C[CLMSH]|D[FG]|G[TR]|HG|JC|M[CNS]|N[ETL]|OC|PL|Q[TR]|S[PLR]|T[CSL]|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\d])(\d)$/,
+    validado = curp.match(re);
+    if (!validado)  //Coincide con el formato general?
+    	return false;
+    
+    //Validar que coincida el dígito verificador
+    function digitoVerificador(curp17) {
+        //Fuente https://consultas.curp.gob.mx/CurpSP/
+        var diccionario  = "0123456789ABCDEFGHIJKLMNÑOPQRSTUVWXYZ",
+            lngSuma      = 0.0,
+            lngDigito    = 0.0;
+        for(var i=0; i<17; i++)
+            lngSuma = lngSuma + diccionario.indexOf(curp17.charAt(i)) * (18 - i);
+        lngDigito = 10 - lngSuma % 10;
+        if (lngDigito == 10) return 0;
+        return lngDigito;
+    }
+  
+    if (validado[2] != digitoVerificador(validado[1])) 
+    	return false;
+        
+    return true; //Validado
+}
+//Handler para el evento cuando cambia el input
+//Lleva la CURP a mayúsculas para validarlo
+function validarInput(input) {
+    var curp = input.value.toUpperCase(),
+    resultado = document.getElementById("resultado"),
+    valido = "No válido";
+        
+    if (curpValida(curp)) { // ⬅️ Acá se comprueba
+    	valido = "Válido";
+        resultado.classList.add("ok");
+    } else {
+    	resultado.classList.remove("ok");
+    }
+        
+    resultado.innerText = "CURP: " + curp + "\nFormato: " + valido;
+}
+
+    </script>
+
+<!-- END: Body-->
+
+</body></html>

@@ -1,0 +1,490 @@
+﻿<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Sistema Web de Citas Sedena.">
+    <meta name="keywords" content="Sistema Web de Citas Sedena">
+    <meta name="author" content="Dpto de Informática">
+    <meta http-equiv="Content-Security-Policy">
+    <title>Sistema de Cita Externa Hospital Central Militar</title>
+    <link rel="apple-touch-icon" href="./app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="bootstrap/Login/img/favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CQuicksand:300,400,500,700"
+        rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="bootstrap/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/vendors/css/icheck.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/vendors/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/vendors/css/material-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="bootstrap/Login/cs/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/Login/cs/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/Login/cs/colors.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/Login/cs/components.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- END: Theme CSS-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="bootstrap/Login/cs/vertical-menu-modern.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/Login/cs/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/Login/cs/login-register.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="bootstrap/Login/js/jquery-ui.min.js"></script>
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="bootstrap/Login/cs/style.css">
+    <!-- END: Custom CSS-->
+
+    <!--Navbar Style-->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+
+
+    <script>
+        function nobackbutton(){
+            window.location.hash="no-back-button";
+            window.location.hash="Again-No-back-button" //chrome
+            window.onhashchange=function(){window.location.hash="no-back-button";}
+        }
+         function nobotonderecho(){
+         document.oncontextmenu = function(){alert ("Que me anda queriendo robar mi código prro del mal");return false}
+        }
+        
+
+        function mostrarAyuda1() {
+            $('#vCenteredModal1').modal('show');
+            //$('#messageModalError3').modal('show');
+        }
+        function mostrarPasswordConfir() {
+            var cambio = document.getElementById("password");
+            if (cambio.type == "password") {
+                cambio.type = "text";
+                $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+            } else {
+                cambio.type = "password";
+                $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+            }
+        }
+
+        $(document).ready(function () {
+            //CheckBox mostrar contraseña
+            $('#ShowPassword').click(function () {
+                $('#Password').attr('type', $(this).is(':checked') ? 'text' : 'password');
+            });
+        });
+    </script>
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+
+<!--<body class="vertical-layout vertical-menu-modern 1-column  bg-full-screen-image blank-page" data-open="click" data-menu="vertical-menu-modern" data-col="1-column">-->
+
+    <body onload="nobotonderecho();nobackbutton();mostrarMsgProcesoEdicion();mostrarRazonSocial2()" >
+    <!-- BEGIN: Content-->
+    <!-- ======= Top Bar ======= -->
+    <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top ">
+        <div class="container d-flex">
+            <div class="contact-info mr-auto">
+                <i class="icofont-envelope"></i> <a
+                    href="mailto:atn_ciudadana@sedena.gob.mx"><strong>atn_ciudadana@sedena.gob.mx</strong></a>
+                <i class="icofont-phone"></i> <strong> 2042</strong>
+            </div>
+            <div class="social-links">
+                <a href="https://twitter.com/SEDENAmx?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                    class="twitter"><i class="icofont-twitter"></i></a>
+                <a href="https://www.facebook.com/SEDENAmxOficial/" class="facebook"><i
+                        class="icofont-facebook"></i></a>
+                <a href="https://www.instagram.com/sedenamx/?hl=es-la" class="instagram"><i
+                        class="icofont-instagram"></i></a>
+                </i></a>
+            </div>
+        </div>
+    </div>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top ">
+        <div class="container d-flex align-items-center">
+
+            <h1 class="logo mr-auto"><a href="index.html">
+                    <img src="assets/img/Logos/SEDENAWHITELOGO.png" alt="" width="190" height="50"></a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                  <li class="active"><a href="index.html"><strong>Inicio</strong></a></li>
+                  <li><a href="index.html #about"><strong>Noticias</strong></a></li>
+                  <li><a href="Download.html"><strong>Descargas</strong></a></li>
+                  <li><a href="https://www.gob.mx/sedena#7679"><strong>Covid-19</strong></a></li>
+                  <li><a href="index.html #team"><strong>Directorio</strong></a></li>
+                  <li><a href="index.html #pricing"><strong>Transparencia</strong></a></li>
+                  
+                  <li class="drop-down"><a href="#"><strong>SEDENA</strong></a>
+                    <ul>
+                      <li class="drop-down"><a href="#"><strong>Sitios  de Intéres</strong></a>
+                        <ul>
+                          <li><a href="https://www.gob.mx/sedena?&_ga=2.26063805.1696890004.1626885329-1819891025.1626885307#7674"><strong>Blog</strong></a></li>
+                          <li><a href="https://www.gob.mx/sedena?&_ga=2.197620655.1696890004.1626885329-1819891025.1626885307#7675"><strong>Multimedia</strong></a></li>
+                          <li><a href="https://www.gob.mx/sedena?&_ga=2.197620655.1696890004.1626885329-1819891025.1626885307#7679"><strong>Prensa</strong></a></li>
+                          <li><a href="https://www.gob.mx/sedena?&_ga=2.197620655.1696890004.1626885329-1819891025.1626885307#7680"><strong>Acciones y programas</strong></a></li>
+                          <li><a href="https://www.gob.mx/sedena?&_ga=2.197620655.1696890004.1626885329-1819891025.1626885307#7682"><strong>Documentos</strong></a></li>
+                        </ul>
+                      </li>
+                      <!--Desplegable, posible uso después-->
+                      <li><a href="https://www.gob.mx/sedena"><strong>Sitio Oficial SEDENA</strong></a></li>
+                      <li><a href="#"><strong>Sitio 8</strong></a></li>
+                      <li><a href="#"><strong>Sitio 9</strong></a></li> 
+                    </ul> 
+                  </li> 
+                  <li><a href="index.html #contact"><strong>Soporte</strong></a></li>
+        
+                </ul>
+            </nav><!-- .nav-menu -->
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <section class="row flexbox-container">
+                    <div class="col-12 d-flex align-items-center justify-content-center">
+                        <div class="col-lg-4 col-md-8 col-10 box-shadow-2 p-0">
+                            <div class="card border-grey border-lighten-3 px-1 py-1 m-0">
+                                <div class="card-header border-0">
+                                    <div class="card-title text-center">
+                                        <img src="bootstrap/Login/img/logo-dark.png" alt="branding logo">
+                                    </div>
+                                    <!--<h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2 black"><span><B>INGRESA AL SISTEMA DE CITAS EN LINEA</B></span></h6>-->
+                                    <h6 class="card-subtitle text-muted text-center font-small-3 pt-2 black">
+                                        <span><B>Bienvenido al Sistema de Consultas Externas Del Hospital
+                                                Central Militar</B></span>
+                                    </h6>
+                                    <h6 class="card-subtitle text-muted text-center font-small-3 pt-2 black">
+                                        <span><B>Por Favor Ingrese sus Datos para poder Agendar una
+                                                Cita.</B></span>
+                                    </h6>
+                                </div>
+                                <div class="card-content">
+                                    <!--<div class="text-center">
+                                        <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-facebook"><span class="la la-facebook"></span></a>
+                                        <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-twitter"><span class="la la-twitter"></span></a>
+                                        <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-linkedin"><span class="la la-linkedin font-medium-4"></span></a>
+                                        <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-github"><span class="la la-github font-medium-4"></span></a>
+                                    </div>
+                                    <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 my-1"><span>OR Using Account
+                                            Details</span></p>-->
+                                    <div class="card-body">
+                                        <form class="form-horizontal" name='f1' id="f1" action="/login" method="post">
+                                            <fieldset class="form-group position-relative has-icon-left mb-1">
+                                                <input type="text" class="form-control form-control-lg input-lg"
+                                                    placeholder="C.U.R.P" name="curp" id="txtCurp" autofocus="autofocus"
+                                                    required="required" maxlength="20" oninput="validarInput(this)"
+                                                    value="">
+                                                <div class="form-control-position">
+                                                    <i class="large material-icons">https</i>
+
+                                                </div>
+                                                <pre id="resultado"></pre>
+                                            </fieldset>
+                                            <fieldset class="form-group position-relative">
+                                                <div class="form-control-position">
+                                                    <i class="large material-icons" onclick=mostrarAyuda1()>vpn_key</i>
+                                                </div>
+                                                <br />
+                                            </fieldset>
+                                            <fieldset class="form-group position-relative has-icon-left">
+                                                <!--                                                <input type="password" class="form-control" id="password" name='password'  placeholder="Contraseña" required minlength="8" maxlength="16">-->
+                                                <input type="password" class="form-control" id="password"
+                                                    name='password' placeholder="Matricula" required minlength="8"
+                                                    maxlength="16">
+                                                <div class="form-control-position">
+
+                                                    <i class="fa fa-eye-slash icon" id="show_password"
+                                                        onclick="mostrarPasswordConfir()"></i>
+
+                                                </div>
+                                            </fieldset>
+
+                                            <div class="form-group row">
+                                                <div class="col-sm-6 col-12 text-center text-sm-left pr-0">
+                                                    <fieldset>
+                                                        <input type="checkbox" id="remember-me" name="remember-me">
+                                                        <label for="remember-me"> Recuerdame</label>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-sm-6 col-12 float-sm-left text-center text-sm-right">
+                                                    <a href="forgot.jsp" class="card-link">¿ Olvid&oacute; su
+                                                        Contraseña ?</a>
+                                                </div>
+                                            </div>
+                                            <button type="submit" value="loginAD"
+                                                class="btn btn-info btn-block btn-lg"> <i class="large material-icons">lock_open</i>
+                                                Ingresar</button>
+                                            <!-- /login?error=true -->
+
+                                        </form>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="">
+                                            <!--<p class="float-xl-left text-center m-0"><a href="recover-password.html" class="card-link">Recover
+                                                password</a></p>-->
+                                            <p class="float-xl-right text-center m-0">¿ Nuevo en el Sistema de
+                                                Citas en L&iacute;nea ? <a href="Registro Usuario.html"
+                                                    class="card-link">Registrar</a></p>
+                                        </div>
+                                    </div>
+                                    <div id="messageModalError3" class="modal fade">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Aviso</h5>
+                                                    <a href="login.html" class="close" data-dismiss="modal">&times;</a>
+                                                </div>
+                                                <div class="modal-body px-5">
+                                                    <div class="row">
+                                                        <div class="col-12"></div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div
+                                                            class="col-12 col-md-4 offset-md-4 text-center text-md-right">
+                                                            <button type="button"
+                                                                class="btn btn-primary btn-rounded btn-block"
+                                                                data-dismiss="modal">Continuar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="vCenteredModal1" class="modal fade">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title text-info info">Tu contraseña
+                                                        </h5>
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                    </div>
+                                                    <div class="modal-body px-5">
+                                                        <div class="row mb-3">
+                                                            <div class="col-12">
+                                                                <h4>Debe Contener:</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <ul>
+                                                                    <li>Mínimo 8 caracteres y máximo 16
+                                                                        caracteres.</li>
+                                                                    <li>Al menos una letra mayúscula y una
+                                                                        minúscula.</li>
+                                                                    <li>Al menos un número.</li>
+                                                                    <!--<li>Al menos un carácter especial *#!_-@.,$%&+?.</li>-->
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div
+                                                                class="col-12 col-md-4 offset-md-4 text-center text-md-right">
+                                                                <a href="#" data-dismiss="modal"
+                                                                    class="btn btn-info btn-rounded btn-block">Continuar</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-info">
+                            <h3>Day</h3>
+                            <p>
+                                Periférico Blvrd Manuel Ávila Camacho s/n, <br>
+                                Militar, Miguel Hidalgo, 11200 Ciudad de México, CDMX<br><br>
+                                <strong>Telefono</strong> +1 5589 55488 55<br>
+                                <strong>Email:</strong> info@example.com<br>
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Links Utiles</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>SEGOB</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>XD</h4>
+                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>SEDENA</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/day-multipurpose-html-template-for-free/ -->
+                Designed by <a href="index.html">DPTO INFORMÁTICA HCM</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <!-- Footer Scripts-->
+    <script src="assets/js/main.js"></script>
+    <!-- BEGIN: Vendor JS-->
+    <script src="bootstrap/Login/js/vendors.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="bootstrap/Login/js/jqBootstrapValidation.js"></script>
+    <script src="bootstrap/Login/js/icheck.min.js"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="bootstrap/Login/js/app-menu.js"></script>
+    <script src="bootstrap/Login/js/app.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="bootstrap/Login/js/form-login-register.js"></script>
+    <!-- END: Page JS-->
+    <script>
+        function mostrarMsgProceo() {
+            var tipomsg = document.getElementById('msgProceso').value;
+            /*
+            if(document.getElementById('btnConitnuar').disabled){
+                document.getElementById('btnConitnuar').disabled=false;
+            }*/
+            console.log("tipo de mensajes " + tipomsg);
+            if (tipomsg == "om1") {//error
+                $('#messageModalError1').modal('show');
+                document.getElementById('msgProceso').value = "";
+            }
+            if (tipomsg == "ok1") {//error
+                $('#messageModalExito').modal('show');
+                document.getElementById('msgProceso').value = "";
+            }
+            if (tipomsg == "inicio") {//error
+                $('#myModalPrivacidad').modal({
+                    backdrop: 'static'
+                }, 'show');
+                document.getElementById('msgProceso').value = "";
+            }
+        }
+        //Función para validar una CURP
+        function curpValida(curp) {
+            var re = /^([A-Z][AEIOUX][A-Z]{2}\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])[HM](?:AS|B[CS]|C[CLMSH]|D[FG]|G[TR]|HG|JC|M[CNS]|N[ETL]|OC|PL|Q[TR]|S[PLR]|T[CSL]|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\d])(\d)$/,
+                validado = curp.match(re);
+            if (!validado)  //Coincide con el formato general?
+                return false;
+
+            //Validar que coincida el dígito verificador
+            function digitoVerificador(curp17) {
+                //Fuente https://consultas.curp.gob.mx/CurpSP/
+                var diccionario = "0123456789ABCDEFGHIJKLMNÑOPQRSTUVWXYZ",
+                    lngSuma = 0.0,
+                    lngDigito = 0.0;
+                for (var i = 0; i < 17; i++)
+                    lngSuma = lngSuma + diccionario.indexOf(curp17.charAt(i)) * (18 - i);
+                lngDigito = 10 - lngSuma % 10;
+                if (lngDigito == 10) return 0;
+                return lngDigito;
+            }
+
+            if (validado[2] != digitoVerificador(validado[1]))
+                return false;
+
+            return true; //Validado
+        }
+        //Handler para el evento cuando cambia el input
+        //Lleva la CURP a mayúsculas para validarlo
+        function validarInput(input) {
+            var curp = input.value.toUpperCase(),
+                resultado = document.getElementById("resultado"),
+                valido = "No válido";
+
+            if (curpValida(curp)) { // ⬅️ Acá se comprueba
+                valido = "Válido";
+                resultado.classList.add("ok");
+            } else {
+                resultado.classList.remove("ok");
+            }
+
+            resultado.innerText = "CURP: " + curp + "\nFormato: " + valido;
+        }
+    </script>
+</body>
+<!-- END: Body-->
+
+</html>
