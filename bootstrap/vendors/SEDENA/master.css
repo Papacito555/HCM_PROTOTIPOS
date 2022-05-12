@@ -1,0 +1,538 @@
+﻿/***** Common Formatting *****/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	/*vertical-align: baseline;*/
+vertical-align: middle;
+	color: #ffff;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/**  General **/
+
+* {
+	margin: 0;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	text-align: left;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	color: #777777;
+	background-color: #f3f3f3;
+}
+
+
+
+
+
+/***** Links *****/
+
+a {
+	/* color: #56030b; */
+	color:#000000;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#D4C19C;
+	text-decoration:none;
+}
+
+/** Header **/
+
+#header {
+	width: 976px;
+	margin: auto;
+	margin-top: 26px;
+	height: 135px;
+	margin-bottom: -1px; /* iPhone/iPad fix */
+	overflow: hidden;	
+	background-color:#FFFFFF;
+	
+}
+
+#date {
+	left:395px;
+	position: relative;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+	font-weight: 600;
+}
+
+#menuheader {
+	left:607px;
+	position: relative;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+	font-weight: 600;
+}
+
+#logo {
+	width: 975px;
+	height: 62px;
+	margin-top:10px;
+	padding-top: 25px;
+	background-image:url(../imagenes/baner_verde_dos_alas.jpg);
+	background-repeat:no-repeat;
+	
+}
+
+
+/** Topmenu **/
+
+#topmenu {
+	width:975px;
+	height:25px;
+	position: relative;
+	left: 0px;
+	bottom:0px;
+	margin:0 auto;
+	padding:0;
+	background-image:url('../imagenes/topmenubar.jpg');
+	background-repeat:repeat-x;
+	line-height:25px;
+	z-index:4008;
+	 
+}
+
+#navtopmenu ul { 
+	float: left;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	margin-top:0px;	
+	list-style: none;
+}
+
+#navtopmenu a {
+	display: block;
+	color: #FFFFFF;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 14px;
+	padding-right: 14px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 1px;
+	text-decoration:none;
+	/*text-transform: uppercase;*/
+}
+
+#navtopmenu li a:hover {
+	color: #D4C19C;
+	text-decoration: none;
+}
+
+#navtopmenu li { 
+	float: left;
+	border-left: 1px solid #285C4D;
+	list-style: none;
+}
+
+#navtopmenu li:hover { 
+	background-image:url('../imagenes/topmenubar_hover.jpg');
+
+}
+
+#navtopmenu li:first-child { 
+	border-left: 0px solid #285C4D;
+}
+
+
+/** Second-level lists **/
+
+#navtopmenu li ul { 
+	position: absolute;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+	font-weight: 400;
+	font-size: 12px;
+	width: 162px;
+	left: -999em; /* "display: none" not seen by screen readers */
+	margin-left: 0px;
+	margin-top:-10px;
+	z-index:100;
+	padding-top: 0px;
+	padding-bottom: 0px;	
+}
+
+#navtopmenu li li,
+#navtopmenu li li:first-child {
+	border-top: 1px solid #285C4D;
+	margin-bottom: -1px; /* iPhone/iPad fix */
+}
+
+#navtopmenu li li a,
+#navtopmenu li.active li a {
+	width: 162px;
+	background-color:#CCCCCC;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 24px;
+	margin: 0;
+	text-transform: none;
+}
+
+
+#navtopmenu li li:first-child {
+	margin-top: 14px;
+	border: 0;
+}
+
+#navtopmenu li ul a {
+	width: 162px;
+}
+
+#navtopmenu li li a:hover {
+	color: #D4C19C;
+	text-decoration: none;
+	background-color: #555555;
+	
+}
+#navtopmenu li li.expand a:hover {
+	background-image:url('../imagenes/topmenu_ex_arrow_hover.jpg');
+	background-repeat:no-repeat;
+	background-position:right;
+}
+
+#navtopmenu li li.end a:hover {
+	background-color:#0033FF; 
+	background-image:url('../images/menu_ex_hover_bg.jpg');
+	background-repeat:repeat-x;
+
+}
+
+/** Level third and above **/
+
+#navtopmenu li li li:first-child {
+	margin-top: 0px;
+}
+
+#navtopmenu li ul ul { 
+	margin: -25px 0 0 200px;
+}
+
+
+#navtopmenu li:hover ul ul, #navtopmenu li:hover ul ul ul, #navtopmenu li.sfhover ul ul, #navtopmenu li.sfhover ul ul ul {
+	left: -999em;
+}
+
+#navtopmenu li:hover ul, #navtopmenu li li:hover ul, #navtopmenu li li li:hover ul, #navtopmenu li.sfhover ul, #navtopmenu li li.sfhover ul, #navtopmenu li li li.sfhover ul { /* nested under hovered items */
+	left: auto;
+}
+
+/* Slideshow */
+
+#slideshow {
+	background-color: #e7e7e7;
+	width: 976px;
+	margin: auto;
+	height:380px;
+	overflow:hidden;
+	position:relative;
+	z-index: 1;
+	padding-top:10px;
+}
+
+#slideimagenes{
+	float:left;
+	position: relative;
+	width:608px;
+
+}
+#apDiv1 {
+	margin-left: 10px;
+	visibility:visible;
+	position:absolute;
+}
+#apDiv2 {
+	margin-left: 10px;
+	visibility:hidden;
+	position:absolute;
+	
+}
+#apDiv3 {
+	margin-left: 10px;
+	visibility:hidden;
+	position:absolute;
+}
+#apDiv4 {
+	margin-left: 10px;
+	visibility:hidden;
+	position:absolute;
+}
+#apDiv5 {
+	margin-left: 10px;
+	visibility: hidden;
+	position:absolute;
+}
+
+#apDiv6 {
+	margin-left: 0px;
+	visibility: hidden;
+	text-align: right;
+	position:absolute;
+}
+
+#apDiv7 {
+	margin-left: 10px;
+	visibility:hidden;
+	position:absolute;
+}
+
+#slidemenu {
+	background: url('../imagenes/slidemenu.gif');
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	position: relative;
+	float:right;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin-right:10px;
+	width: 28em;
+	width:360px;
+	height: 318px;
+}
+#slidemenu li {
+	text-align:justify;
+	margin: 0;
+	padding: 0;
+}
+#slidemenu a {
+	border-bottom: 2px solid #FFF;
+	color: #000;
+	display: block;
+	margin: 0;
+	text-decoration: none;
+	padding: 10px;
+}
+#slidemenu a:hover {
+	background: url('../imagenes/slidemenu_hover.gif') ;
+	padding-bottom: 15px;
+	text-align: right;
+	color: #000;
+	padding-top: 15px;
+}
+
+/** Contentainer**/
+#container {
+	background-color:#285C4D;
+	width: 976px;
+	margin: auto;
+	overflow:hidden;
+	position:relative;
+	z-index: 1;
+	padding-top:10px;
+}
+#container p.titlect{
+	font-size:15px;
+	font-weight:bold;
+	color:ffff;
+}
+#sidebar1 {
+	float: left;
+	width: 200px;
+	padding-bottom: 25px;
+}
+#contentcorreo {
+	padding: 30px 0;
+	width: 600px;
+	float: left;
+}
+#sidebar2 {
+	float: left;
+	width: 100px;
+	padding: 40px 0;
+}
+
+#content_video{
+	float:left;
+	position: relative;
+	width:608px;
+	margin-top:20px;
+
+	
+}
+
+#content_videotext {
+	
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	position: relative;
+	float:right;
+	list-style: none;
+	margin: 0;
+	margin-top:50px;
+	margin-right:10px;
+	width: 28em;
+	width:350px;
+	font-size:14px;
+
+}
+
+#content_videotext a:hover{
+	text-decoration:underline;
+
+}
+
+/* ~~ Los estilos de lista de navegación (pueden eliminarse si opta por usar un menú desplegable predefinido como el de Spry) ~~ */
+#container ul.nav {
+	list-style: none; /* esto elimina el marcador de lista */
+	border-top: 1px solid #666; /* esto crea el borde superior de los vínculos (los demás se sitúan usando un borde inferior en el LI) */
+	margin-bottom: 15px; /* esto crea el espacio entre la navegación en el contenido situado debajo */
+}
+#container ul.nav li {
+	border-bottom: 1px solid #666; /* esto crea la separación de los botones */
+}
+#container ul.nav a, ul.nav a:visited { /* al agrupar estos selectores, se asegurará de que los vínculos mantengan el aspecto de botón incluso después de haber sido visitados */
+	padding: 15px 15px 15px 15px;
+	display: block; /* esto asigna propiedades de bloque al vínculo, lo que provoca que llene todo el LI que lo contiene. Esto provoca que toda el área reaccione a un clic de ratón. */
+	text-decoration: none;
+	background: #FFFFFF;
+	color: #000;
+}
+#container ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* esto cambia el color de fondo y del texto tanto para usuarios que naveguen con ratón como para los que lo hagan con teclado */
+	background: #6F7D94;
+	color: #FFF;
+}
+
+#mensaje {
+	padding: 15px 15px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size:18px;
+	color:#FFFFFF;
+	background: #6F7D94;
+	position: relative;/* esto da a IE6 hasLayout para borrar correctamente */
+	clear: both; /* esta propiedad de borrado fuerza a .container a conocer dónde terminan las columnas y a contenerlas */
+}
+
+/** Content/Menu Wrap/Containers **/
+
+#content-menu_wrap {
+	width:  976px;
+	clear: both;
+	padding-top: 1px;
+	margin: auto;
+	margin-bottom: -1px; /* iPhone/iPad fix */
+	background-color:#FFFFFF inherit;
+}
+
+
+
+
+#container-column1 td.text_cajtem_int,
+#container-column2 td.text_cajtem_int,
+#container-column3 td.text_cajtem_int,
+#container-column4 td.text_cajtem_int{
+	background-color:#13322B;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size:16px;
+	text-align:center;
+	height:30px;
+	padding-left:10px;
+	padding-top:10px;
+	color:#FFFFFF;
+	border-bottom: 2px solid #13322b;
+}
+
+#container-column1 td.text_inciontem_int,
+#container-column2 td.text_inciontem_int,
+#container-column3 td.text_inciontem_int,
+#container-column4 td.text_inciontem_int{
+	border-bottom: 2px solid #13322b;
+	border-left: 2px solid #13322b;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	padding-left:5px;
+	
+}
+
+#container-column1 p,
+#container-column2 p,
+#container-column3 p,
+#container-column4 p{
+	font-size: 12px;
+	padding-top:10px;
+}
+
+#container-column1 p a:hover,
+#container-column2 p a:hover,
+#container-column3 p a:hover,
+#container-column4 p a:hover{
+	font-size: 12px;
+	/*padding-top:10px;*/
+	text-decoration:underline;
+}
+
+#container-column1 {
+	float: left;
+	width: 244px;
+	position: relative;
+	overflow: hidden;
+	padding-top: 20px;
+	padding-bottom: 0px;
+
+}
+
+#container-column2 {
+	float: left;
+	width: 244px;
+	position: relative;
+	overflow: hidden;	
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#container-column3 {
+	float: left;
+	width: 244px;
+	position: relative;
+	overflow: hidden;	
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#container-column4 { 
+	float: left;
+	width: 244px;
+	position:relative;
+	overflow: hidden;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	min-height: 300px;	
+}
+
+
+/** Footer **/
+
+#footer {
+	clear: both;
+	width: 976px;
+	margin: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	padding-right: 0px;
+	color: #999999;
+	border-top: 2px solid #FFFFFF;
+	text-align:center;
+	background-color:#13322b;
+}
